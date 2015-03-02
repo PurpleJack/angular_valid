@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Validation Angular</title>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular.min.js"></script>
+    </head>
+    <body>
+        <form name="myForm" ng-submit="foo()">
+            <label>Prénom : </label>
+            <input name="prenom" type="text" required ng-minlength="2" ng-maxlength="20" />
+
+            <label>Nom : </label>
+            <input name="nom" type="text" ng-maxlength="30" />
+
+            <label>E-mail : </label>
+            <input name="mail" type="email" required />
+
+            <label>Âge : </label>
+            <input name="age" type="number" required />
+
+            <input type="submit" value="Envoyer" />
+        </form>
+    </body>
+</html>
