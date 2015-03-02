@@ -9,19 +9,19 @@
         <form name="myForm" ng-submit="foo()" novalidate>
             <label>Prénom : </label>
             <input name="prenom" type="text" required ng-minlength="2" ng-maxlength="20" />
-            <div ng-messages="myForm.prenom.$error" ng-messages-include="erreurs.html"></div>
+            <div ng-messages="myForm.prenom.$error" ng-messages-include="erreurs.html" ng-if="myForm.$submitted"></div>
 
             <label>Nom : </label>
             <input name="nom" type="text" ng-maxlength="30" />
-            <div ng-messages="myForm.nom.$error" ng-messages-include="erreurs.html"></div>
+            <div ng-messages="myForm.nom.$error" ng-messages-include="erreurs.html" ng-if="myForm.$submitted"></div>
 
             <label>E-mail : </label>
             <input name="mail" type="email" required />
-            <div ng-messages="myForm.mail.$error" ng-messages-include="erreurs.html"></div>
+            <div ng-messages="myForm.mail.$error" ng-messages-include="erreurs.html" ng-if="myForm.$submitted"></div>
 
             <label>Âge : </label>
             <input name="age" type="number" required />
-            <div ng-messages="myForm.age.$error" ng-messages-include="erreurs.html"></div>
+            <div ng-messages="myForm.age.$error" ng-messages-include="erreurs.html" ng-if="myForm.$submitted"></div>
 
             <input type="submit" value="Envoyer" />
         </form>
